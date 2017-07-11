@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="./public/styles.css"/>
+</head>
+<body>
+        <div class='header'>
+            <a class="nav" href="/">Home</a>
+            <a class="nav" href="/employed">Employed Users</a>
+            <a class="nav" href="/available">Available for Work</a>
+        </div>
+        <div class="body-wrapper">  
+        <form class="search-bar" method="POST" action="/country">
+            <select name="country" class="countrySelections">
+                {{#countries}}
+                <option value="{{.}}">{{.}}</option>
+                {{/countries}}
+            </select>
+            <button type="submit">Search</button>
+        </form>
+        <div class='user-info'>
+            {{#users}}
+            <div class="userDiv">
+                <img class="thumbnail" src={{avatar}}></img>
+                <a class="name" href="{{id}}">{{name}}</a>
+                {{#job}}<p class='working'> {{job}}{{company}} </p>{{/job}}
+                {{^job}}<p class='lookingForWork'> Available for Hire</p>{{/job}}
+            </div>
+            {{/users}}
+        </div>
+        </div>
+    </body>
+</html>

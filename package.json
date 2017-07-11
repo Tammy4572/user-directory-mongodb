@@ -1,0 +1,30 @@
+{
+  "name": "user-directory-mongodb",
+  "version": "1.0.0",
+  "description": "user directory using mongoDB",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Tammy4572/user-directory-mongodb.git"
+  },
+  "keywords": [
+    "mongoDB",
+    "user-directory"
+  ],
+  "author": "Tammy4572",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tammy4572/user-directory-mongodb/issues"
+  },
+  "homepage": "https://github.com/Tammy4572/user-directory-mongodb#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongodb": "^2.2.29",
+    "mustache": "^2.3.0",
+    "mustache-express": "^1.2.4"
+  }
+}

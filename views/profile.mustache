@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./public/styles.css">
+    </head>
+        <body>
+            <div class="profile-body-wrapper">
+            <div class="profile-container">
+            <img class="profilePicIndividual" src={{avatar}}></img>
+            <div class="profile-wrapper">
+            <div class="profile-name">{{name}}</div>
+            <div class="flex-info">
+                {{#address.city}}<p>{{address.city}}, {{address.country}}</p><p class="divider"> {{#job}} {{job}}, {{company}} {{/job}} {{^job}}</p> <p class='avail'> Available For Hire</p> {{/job}} </p>{{/address.city}}
+
+                {{^address.city}}<p>{{address.country}} {{#job}} {{job}}, {{company}} {{/job}}</p>{{/address.city}}
+            </div>
+            <div class="flex-info"><p>{{email}}</p><p class="divider">{{phone}}</p></div>
+            </div>
+            <div class="backgroundInfo">
+                {{#university}}<div class="education"><p class="title">Education</p><p>{{university}}</p></div>{{/university}}
+            </div>
+                <div class="backgroundInfo">
+                    <div class="skills">
+                        <p class="title">Skills</p>
+                        <ul>{{#skills}}
+                            <li class="skills-list">{{.}}</li>
+                        {{/skills}}</ul>
+                    </div>
+                 </div>
+           
+        </body>
+</html>
